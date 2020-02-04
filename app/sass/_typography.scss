@@ -1,0 +1,26 @@
+
+
+html, body {
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: $base-font-size;
+    color: $text-color; 
+    // background-color: #FFF;
+}
+
+h1  {
+    font-size: 4rem;
+    margin: $main-spacing 0;
+    font-weight: 600;
+    }
+
+h2  {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: $main-spacing 0;}
+
+p  {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    // font-weight: 500;
+}
