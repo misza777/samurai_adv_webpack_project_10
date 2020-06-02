@@ -1,16 +1,18 @@
 {
   "name": "wp-minimalist-boilerplate",
   "version": "1.0.0",
-  "author": "João Vilaça",
-  "description": "Minimal webpack boilerplate with HMR and sass",
+  "author": "Michal Nowak",
+  "description": "Dog breeds API - hau hau",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jpggvilaca/webpack-boilerplate"
+    "url": "https://github.com/misza777/samurai_adv_webpack_project_10_API-Dogs"
   },
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --colors",
-    "build": "cross-env NODE_ENV=production webpack"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --colors --open",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "webpack",
@@ -20,14 +22,14 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
     "@babel/preset-es2015": "^7.0.0-beta.53",
-    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-react": "^7.10.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "babel-plugin-transform-es2015-classes": "^6.24.1",
@@ -36,21 +38,26 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
     "clean-webpack-plugin": "^3.0.0",
-    "cross-env": "^6.0.0",
+    "copy-webpack-plugin": "^6.0.1",
+    "cross-env": "^6.0.3",
     "css-hot-loader": "^1.4.4",
-    "css-loader": "^3.2.0",
+    "css-loader": "^3.5.3",
+    "html-loader": "^1.1.0",
     "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
+    "mini-css-extract-plugin": "^0.8.2",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
-    "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.1"
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.8.3"
+    "@babel/polyfill": "^7.10.1",
+    "gh-pages": "^3.0.0"
   }
 }
